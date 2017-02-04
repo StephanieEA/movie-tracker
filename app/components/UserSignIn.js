@@ -25,7 +25,6 @@ export default class UserSignIn extends Component {
   }
 
   handleSignIn (username, password) {
-    console.log(this.props)
     const server = ('http://localhost:3000/api/users')
     fetch(server, {
       method:'POST',
@@ -46,6 +45,9 @@ export default class UserSignIn extends Component {
     let {username, password, error} = this.state
     return(
       <section>
+        <Link to='/'>
+          <button> Home </button>
+        </Link>
         <h2>Already a user? Sign In</h2>
         <input
           placeholder='Username'
